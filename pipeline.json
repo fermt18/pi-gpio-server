@@ -1,0 +1,21 @@
+{
+  "application": {
+    "name": "RPi GPIO Server",
+    "type": "python"
+  },
+  "build": {
+    "path": null,
+    "outputPath": null
+  },
+  "test": {
+    "enabled": true,
+    "path": null
+  },
+  "archive": {
+    "registry": "docker.io",
+    "repository": "fermt18/pi-gpio-server"
+  },
+  "deploy": {
+    "containerPort": 8080
+  }
+}
