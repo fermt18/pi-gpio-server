@@ -1,22 +1,22 @@
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 from flask import Flask, render_template
 
 app = Flask(__name__)
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
+#GPIO.setmode(GPIO.BCM)
+#GPIO.setwarnings(False)
 led = 25
-ledSts = GPIO.LOW
+#ledSts = GPIO.LOW
 
-GPIO.setup(led, GPIO.IN)
+#GPIO.setup(led, GPIO.IN)
 
 @app.route('/')
 def index():
-    ledSts = GPIO.input(led)
+    #ledSts = GPIO.input(led)
     template_data = {
-        'title' : 'GPIO input status',
-        'led' : ledSts
+        'title' : 'GPIO input status'
+        #'led' : ledSts
         }
-    return render_template('index.html', **templateData)
+    return render_template('index.html', **template_data)
 
 if __name__ == "__main__":
-    app.run(host = '0.0.0.0', port = 80, debug = True)
+    app.run(host = '0.0.0.0', port = 10000, debug = True)
