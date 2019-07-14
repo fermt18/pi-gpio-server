@@ -16,6 +16,6 @@
     "repository": "fermt18/pi-gpio-server"
   },
   "deploy": {
-    "containerPort": 8080
+    "containerPort": 10000
   }
 }
